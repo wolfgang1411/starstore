@@ -2,6 +2,7 @@ const express = require("express");
 const Product = require("../models/Products");
 const router = express.Router();
 const mongoose = require("mongoose");
+const Directory = require("../models/DirectoryData")
 
 // get all products
 
@@ -45,6 +46,18 @@ router.get("/:id", async (req, res) => {
     return res.status(401).json({ errors: "Server Error" });
   }
 });
+
+//get directory product
+
+router.get("/home/directory", async (req,res) => {
+  try {
+    const directory = await Directory.find()
+    return res.status(200).json(directory)
+  } catch (err) {
+    console.log(err.message)
+    return res.status(401).json({errors:"server error"})
+  }
+})
 
 module.exports = router;
 

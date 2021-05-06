@@ -1,0 +1,2 @@
+export const GET_DIRECTORY = 'GET_DIRECTORY'
+export const DIRECTORY_ERROR = "DIRECTORY_ERROR"
