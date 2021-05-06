@@ -1,7 +1,7 @@
 import React , { useEffect} from 'react'
 import {connect} from 'react-redux';
-import { getDirectory } from '../redux/actions/directory.action';
-import Spinner from './spinner.component'
+import { getDirectory } from '../../redux/actions/directory.action';
+import Spinner from '../spinner.component'
 
 const Homepage = ({getDirectory, directory:{loading}}) => {
     useEffect(() => {

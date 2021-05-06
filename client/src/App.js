@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 
-import Homepage from './components/homepage.component';
+import Homepage from './components/homepage/homepage.component';
 import setAuthToken from './utils/authToken'
 // redux
 import { Provider } from "react-redux";
